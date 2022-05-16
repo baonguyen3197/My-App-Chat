@@ -1,0 +1,25 @@
+<div *ngIf="_user">
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Email" />
+      <button (click)="sendRequest()">Send</button>
+    </mat-form-field>
+  </form>
+</div>
+
+<div *ngIf="_user">
+  <div *ngFor="let req of request">
+    <div *ngIf="req.isFriend == false">
+      <p>{{ req.name }}</p>
+      <button mat-raised-button>
+        <mat-icon (click)="doSomethingWithRequest(true, req.uid)">add</mat-icon>
+      </button>
+      <button mat-raised-button>
+        <mat-icon (click)="doSomethingWithRequest(false, req.uid)"
+          >clear</mat-icon
+        >
+      </button>
+    </div>
+  </div>
+</div>

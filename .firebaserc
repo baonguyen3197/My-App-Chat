@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "myappchat-c1c57": {
+      "hosting": {
+        "MyAppChat": [
+          "myappchat-c1c57"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "myappchat-c1c57"
+  }
+}
